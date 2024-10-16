@@ -4,7 +4,7 @@ export default class Produto {
     nome: String;
     descricao : String;
     quantidade_estoque: number | null;
-    ativo: boolean;
+    ativo: boolean | null;
     valor: number | null;
     data_cadastro: String;
     categoria: number | null;

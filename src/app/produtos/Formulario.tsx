@@ -2,14 +2,15 @@ import { useContext } from 'react'
 import AlertaMessage from '@/componentes/Alerta';
 import ProdutoContext from './ProdutoContext';
 import Col from 'react-bootstrap/Col';
-import CampoEntrada from '../../comuns/CampoEntrada';
-import Dialogo from '../../comuns/Dialogo';
-import CampoSelect from '../../comuns/CampoSelect';
-import CampoEntradaTextArea from '../../comuns/CampoEntradaTextArea';
+import CampoEntrada from '@/componentes/CampoEntrada';
+import Dialogo from '@/componentes/Dialogo';
+import CampoSelect from '@/componentes/CampoSelect';
+import CampoEntradaTextArea from '@/componentes/CampoEntradaTextArea';
+import { useProdutoContext } from './page';
 
 function Formulario() {
 
-    const { objeto, handleChange, acaoCadastrar, alerta, exibirForm, setExibirForm, listaCategorias } = useContext(ProdutoContext);
+    const { objeto, handleChange, acaoCadastrar, alerta, exibirForm, setExibirForm, listaCategorias } = useProdutoContext();
 
     return (
         <Dialogo id="modalEdicao" titulo="Produto"
@@ -65,8 +66,8 @@ function Formulario() {
                     onchange={handleChange}
                     msgvalido="OK certo" msginvalido="Informe se está ativo"
                     requerido={true}>
-                    <option value={true}>Sim</option>
-                    <option value={false}>Não</option>
+                    <option value="true">Sim</option>
+                    <option value="false">Não</option>
                 </CampoSelect>
             </Col>
             <Col xs={12} md={12}>

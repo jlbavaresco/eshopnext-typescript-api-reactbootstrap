@@ -3,7 +3,7 @@ import Categoria from '@/bd/entitites/Categoria';
 import Produto from '@/bd/entitites/Produto';
 import React, { createContext } from 'react';
 
-export  interface ProdutoContextType {
+export interface ProdutoContextType {
     listaObjetos: Produto[];
     alerta: Alerta;
     remover: (codigo : number) => void;

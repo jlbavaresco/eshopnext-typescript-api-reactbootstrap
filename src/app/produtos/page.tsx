@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect, useContext  } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import ProdutoContext from './ProdutoContext';
 import { getCategoriasAPI } from '@/servicos/CategoriaServico';
 import { getProdutosAPI, getProdutoPorCodigoAPI, deleteProdutoPorCodigoAPI, cadastraProdutoAPI } from '@/servicos/ProdutoServico'
@@ -64,7 +64,7 @@ function CrudProduto() {
             descricao: "",
             quantidade_estoque: null,
             valor: null,
-            ativo: true,
+            ativo: null,
             data_cadastro: new Date().toISOString().slice(0, 10),
             categoria: null,
             categoria_nome: ""
@@ -102,7 +102,7 @@ function CrudProduto() {
     };
 
     return (
-        <ProdutoContext.Provider  value={
+        <ProdutoContext.Provider value={
             {
                 listaObjetos, alerta, remover, objeto, editarObjeto,
                 acaoCadastrar, handleChange, novoObjeto, exibirForm, setExibirForm, listaCategorias
@@ -111,7 +111,7 @@ function CrudProduto() {
             <Carregando carregando={carregando}>
                 <Tabela />
             </Carregando>
-          
+            <Formulario />
         </ProdutoContext.Provider>
     );
 }
