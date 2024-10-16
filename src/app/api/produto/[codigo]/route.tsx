@@ -22,7 +22,7 @@ export async function GET(request: NextRequest, context: { params: FindByCodigo 
 export async function DELETE(request: NextRequest, context: { params: FindByCodigo }) {
     try {
         let resultado = await deleteProdutoDB(Number(context.params.codigo));
-        return NextResponse.json({status : "success", mensagem : resultado},{ status: 200 });
+        return NextResponse.json({status : "success", message : resultado},{ status: 200 });
     } catch (err) {
         return NextResponse.json(
             { status: 'Error', message: "Erro: " + err },

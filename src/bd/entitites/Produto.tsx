@@ -3,15 +3,15 @@ export default class Produto {
     codigo: number;
     nome: String;
     descricao : String;
-    quantidade_estoque: number;
+    quantidade_estoque: number | null;
     ativo: boolean;
-    valor: number;
-    data_cadastro: Date;
-    categoria: number;
-    categoria_nome: String;
+    valor: number | null;
+    data_cadastro: String;
+    categoria: number | null;
+    categoria_nome: String ;
 
     constructor(codigo: number, nome: String, descricao: String, quantidade_estoque: number,
-        ativo: boolean, valor: number, data_cadastro: Date, categoria: number, categoria_nome: String
+        ativo: boolean, valor: number, data_cadastro: String, categoria: number, categoria_nome: String
     ) {
         this.codigo = codigo;
         this.nome = nome;
