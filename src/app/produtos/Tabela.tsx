@@ -1,5 +1,3 @@
-import { useContext } from 'react'
-import ProdutoContext from './ProdutoContext';
 import AlertaMessage from '@/componentes/Alerta';
 import Table from 'react-bootstrap/Table';
 import { Button } from 'react-bootstrap';
