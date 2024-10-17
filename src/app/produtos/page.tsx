@@ -117,12 +117,3 @@ function CrudProduto() {
 }
 
 export default CrudProduto;
-
-// para poder utilizar o contexto em outros componentes
-// export const useProdutoContext = () => {
-//     const context = useContext(ProdutoContext);
-//     if (!context) {
-//         throw new Error("Erro ao carregar o ProdutoContext");
-//     }
-//     return context;
-// };
