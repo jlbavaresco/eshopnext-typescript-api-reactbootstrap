@@ -21,7 +21,7 @@ const CampoSelect : FunctionComponent<CampoSelectProps> =(props) => {
             <Form.Select
                 value={props.value} required={props.requerido}
                 name={props.name} onChange={props.onchange}>
-                <option disabled={true} value="">({props.msginvalido})</option>
+                <option disabled selected value="">({props.msginvalido})</option>
                 {props.children}
             </Form.Select>
             <Form.Control.Feedback>{props.msgvalido}</Form.Control.Feedback>
