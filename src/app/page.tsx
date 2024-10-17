@@ -9,18 +9,18 @@ import Row from 'react-bootstrap/Row';
 
 export default async function Home() {
 
-  const produtos = await getProdutosAPI();
+  //const produtos = await getProdutosAPI();
 
   return (
     <div style={{ padding: '20px' }}>      
       <Container>
-        <Row>
+{/*         <Row>
           {
             produtos.map((produto: Produto) => (             
                 <CardProduto produto={produto} key={produto.codigo}/>           
             ))
           }
-        </Row>
+        </Row> */}
       </Container>
     </div>
   );
