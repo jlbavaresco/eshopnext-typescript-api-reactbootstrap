@@ -10,8 +10,8 @@ export default class Produto {
     categoria: number | null;
     categoria_nome: String ;
 
-    constructor(codigo: number, nome: String, descricao: String, quantidade_estoque: number,
-        ativo: boolean, valor: number, data_cadastro: String, categoria: number, categoria_nome: String
+    constructor(codigo: number, nome: String, descricao: String, quantidade_estoque: number | null,
+        ativo: boolean | null, valor: number | null, data_cadastro: String, categoria: number | null, categoria_nome: String
     ) {
         this.codigo = codigo;
         this.nome = nome;

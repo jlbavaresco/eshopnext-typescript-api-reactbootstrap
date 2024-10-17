@@ -4,7 +4,7 @@ import CampoEntrada from '@/componentes/CampoEntrada';
 import Dialogo from '@/componentes/Dialogo';
 import CampoSelect from '@/componentes/CampoSelect';
 import CampoEntradaTextArea from '@/componentes/CampoEntradaTextArea';
-import { useProdutoContext } from './page';
+import { useProdutoContext } from './useProdutoContext';
 
 function Formulario() {
 

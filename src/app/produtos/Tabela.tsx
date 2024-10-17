@@ -2,7 +2,7 @@ import AlertaMessage from '@/componentes/Alerta';
 import Table from 'react-bootstrap/Table';
 import { Button } from 'react-bootstrap';
 import { formatoMoeda } from '@/componentes/Uteis';
-import { useProdutoContext } from './page';
+import { useProdutoContext } from './useProdutoContext';
 
 
 function Tabela() {
