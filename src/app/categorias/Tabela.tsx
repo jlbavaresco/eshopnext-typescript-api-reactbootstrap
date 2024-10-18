@@ -1,13 +1,12 @@
 import AlertaMessage from '@/componentes/Alerta';
 import Table from 'react-bootstrap/Table';
 import { Button } from 'react-bootstrap';
-import { formatoMoeda } from '@/componentes/Uteis';
-import { useProdutoContext } from './useProdutoContext';
+import { useCategoriaContext } from './useCategoriaContext';
 
 
 function Tabela() {
 
-    const { alerta, listaObjetos, remover, novoObjeto, editarObjeto } = useProdutoContext();
+    const { alerta, listaObjetos, remover, novoObjeto, editarObjeto } = useCategoriaContext();
 
     return (
         <div style={{ padding: '20px' }}>
@@ -16,7 +15,7 @@ function Tabela() {
             <Button variant="primary" onClick={() => novoObjeto()}>
                 Novo <i className="bi bi-file-earmark-plus"></i>
             </Button>
-            {listaObjetos.length === 0 && <h1>Nenhum produto encontrado</h1>}
+            {listaObjetos.length === 0 && <h1>Nenhuma categoria encontrada</h1>}
             {listaObjetos.length > 0 && (
 
                 <Table striped bordered hover responsive>
@@ -26,13 +25,7 @@ function Tabela() {
                                 textAlign: 'center'
                             }}>Ações</th>
                             <th>Código</th>
-                            <th>Nome</th>
-                            <th >Descrição</th>
-                            <th>Estoque</th>
-                            <th>Ativo</th>
-                            <th>Valor</th>
-                            <th>Data Cadastro</th>
-                            <th>Categoria</th>
+                            <th>Nome</th>                            
                         </tr>
                     </thead>
                     <tbody>
@@ -47,13 +40,7 @@ function Tabela() {
                                     </Button>
                                 </td>
                                 <td>{objeto.codigo}</td>
-                                <td>{objeto.nome}</td>
-                                <td>{objeto.descricao}</td>
-                                <td>{objeto.quantidade_estoque}</td>
-                                <td>{objeto.ativo ? 'SIM' : 'NÃO'}</td>
-                                <td>{formatoMoeda(objeto.valor)}</td>
-                                <td>{objeto.data_cadastro}</td>
-                                <td>{objeto.categoria_nome}</td>
+                                <td>{objeto.nome}</td>                            
                             </tr>
                         ))}
                     </tbody>
