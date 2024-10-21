@@ -8,17 +8,17 @@ export const revalidate = 60; // revalida a cada 60 segundos
 
 export default async function Home() {
 
-  const produtos = await getProdutosAPI();
+ // const produtos = await getProdutosAPI();
 
   return (
     <div style={{ padding: '20px' }}>      
       <Container>
          <Row>
-          {
+          {/* {
             produtos.map((produto: Produto) => (             
                 <CardProduto produto={produto} key={produto.codigo}/>           
             ))
-          }
+          } */}
         </Row>
       </Container>
     </div>
